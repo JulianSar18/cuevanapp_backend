@@ -1,4 +1,3 @@
-const db = require('../bd_connection')
 const express = require('express')
 const getboletas = require('../Model/DTO_boletas')
 
@@ -8,6 +7,7 @@ router.get(
     '/getboletas',
     (req, res) => {
         getboletas()
+        console.log('hola')
     }
 )
 module.exports = router
