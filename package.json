@@ -1,0 +1,23 @@
+{
+    "name": "cuevanapp_backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JulianSar18/cuevanapp_backend.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "buzgs": {
+        "url": "https://github.com/JulianSar18/cuevanapp_backend/issues"
+    },
+    "homepage": "https://github.com/JulianSar18/cuevanapp_backend#readme",
+    "dependencies": {
+        "express": "^4.17.3"
+    }
+}
