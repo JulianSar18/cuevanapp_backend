@@ -7,13 +7,13 @@ const getboletas = async() => {
 };
 
 const sendboletas = async(boleta) => {
-    const res = await bd.query(`insert into boletas (precios,categoria,descuento) values (${boleta.precios}, '${boleta.categoria}', ${boleta.descuento});`)
+    const res = await bd.query(`insert into boletas (precios,categoria) values (${boleta.precios}, '${boleta.categoria}');`)
     console.log(res)
     return res
 };
 
 const updatedboletas = async(boleta) => {
-    const res = await bd.query(`update boletas set precios = ${boleta.precios}, categoria = '${boleta.categoria}', descuento = ${boleta.descuento} where id=${boleta.id};`)
+    const res = await bd.query(`update boletas set precios = ${boleta.precios}, categoria = '${boleta.categoria}' where id=${boleta.id};`)
     console.log(res)
     return res
 };
