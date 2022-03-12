@@ -1,6 +1,6 @@
 const db = require('../bd_connection')
 
-const getUsuarios = async () => {
+const getUsers = async () => {
   const res = await db.query(`SELECT * FROM users;`)
   return res
 }
@@ -19,4 +19,4 @@ const updateUser = async (user) => {
   const res = await db.query(`UPDATE users SET nombre='${user.name}', fecha_nacimiento='${user.birth_date}', correo='${user.email}', rol ='${user.role}', firebase_uid ='${user.firebase_uid}' where id = ${user.id};`)
   return res
 }
-module.exports = {getUsuarios, deleteUser, insertUser, updateUser}
+module.exports = {getUsers, deleteUser, insertUser, updateUser}
