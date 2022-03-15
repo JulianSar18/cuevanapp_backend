@@ -7,7 +7,7 @@ const getcines = async() => {
 };
 
 const sendcines = async(cine) => {
-    const res = await bd.query(`insert into cines (nombre,direccion,telefono,image_url) values ('${cine.nombre}', '${cine.direccion}', ${cine.telefono}, ${cine.image_url});`)
+    const res = await bd.query(`insert into cines (nombre,direccion,telefono,image_url) values ('${cine.nombre}', '${cine.direccion}', ${cine.telefono}, '${cine.image_url}');`)
     console.log(res)
     return res
 };
