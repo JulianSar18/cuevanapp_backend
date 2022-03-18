@@ -13,6 +13,15 @@ router.get(
 )
 
 router.post(
+  '/getsingleuser', async (req, res) => {
+    const response = await dtoUsers.getSingleUser(req.body)
+    return res.json({
+      ...response
+    })
+  }
+)
+
+router.post(
   '/insertuser', async (req, res) => {
     const user = req.body
     const response = await dtoUsers.insertUser(user)
