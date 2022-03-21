@@ -24,4 +24,10 @@ const deletesalas = async(salas) => {
     return res
 };
 
-module.exports = { getsalas, deletesalas, sendsalas, updatesalas }
+const getsalascines = async(salas) => {
+    const res = await bd.query(`select salas.id, salas.numero_sala, cines.id, cines.nombre from salas inner join cines on salas.cines_id = cines.id;`)
+    console.log(res)
+    return res
+};
+
+module.exports = { getsalas, deletesalas, sendsalas, updatesalas, getsalascines }

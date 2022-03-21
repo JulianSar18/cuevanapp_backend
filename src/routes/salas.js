@@ -12,6 +12,15 @@ router.get(
     }
 )
 
+router.get(
+    '/getsalascines', async(req, res) => {
+        const response = await DTOsalas.getsalascines()
+        return res.json({
+            salas: response
+        })
+    }
+)
+
 router.post(
     '/insertsala', async(req, res) => {
         const sala = req.body
