@@ -26,7 +26,7 @@ const deletesalas = async(salas) => {
 };
 
 const getsalascines = async(salas) => {
-    const res = await bd.query(`select salas.id, salas.numero_sala, cines.nombre from salas inner join cines on salas.cines_id = cines.id;`)
+    const res = await bd.query(`select salas.id, salas.numero_sala, cines.nombre, cines.id as id_cine from salas inner join cines on salas.cines_id = cines.id;`)
     console.log(res)
     return res
 };
