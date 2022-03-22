@@ -19,13 +19,14 @@ const updatesalas = async(salas) => {
 };
 
 const deletesalas = async(salas) => {
+    console.log('perrrro')
     const res = await bd.query(`delete from salas where id = ${salas.id};`)
     console.log(res)
     return res
 };
 
 const getsalascines = async(salas) => {
-    const res = await bd.query(`select salas.id, salas.numero_sala, cines.id, cines.nombre from salas inner join cines on salas.cines_id = cines.id;`)
+    const res = await bd.query(`select salas.id, salas.numero_sala, cines.nombre from salas inner join cines on salas.cines_id = cines.id;`)
     console.log(res)
     return res
 };

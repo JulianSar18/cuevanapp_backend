@@ -51,7 +51,6 @@ router.put(
 router.delete(
     '/deletesala', async(req, res) => {
         const sala = req.body
-        console.log(sala)
         const response = await DTOsalas.deletesalas(sala)
         const salas = await DTOsalas.getsalas()
         res.statusCode = 200
